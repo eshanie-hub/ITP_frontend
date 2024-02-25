@@ -9,7 +9,9 @@ const Credit_Manager = () => {
             </a>
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black" id="menu">
                 <li class="nav-item mb-3">
-                    <a href="../../pages/employee_salary/view" class="nav-link align-middle px-0 text-black">
+
+                    <a href="../../pages/employee_salary/CreditManager_view" class="nav-link align-middle px-0 text-black">
+
                         <span class="">Employee Salary System</span>
                     </a>
                 </li>

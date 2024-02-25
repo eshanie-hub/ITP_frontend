@@ -1,21 +1,17 @@
 import React from 'react'
 import Header from '../../component/Header'
 
-const SalesExecutive_view = () => {
+const EditSalary = () => {
   return (
     <>
       <div class="col">
-
-          <Header dashboard={"Delivery Management System"} />
-
+          <Header dashboard={"Employee Salary System"} />
       </div>
       <div class="container-fluid">
         <div class="row flex-nowrap">
           <div class="col py-3">
-
-            Sales_Executive delievery view
-
-            {/* table */}
+          edit form
+          
             </div>
         </div>
       </div>
@@ -23,4 +19,4 @@ const SalesExecutive_view = () => {
   )
 }
 
-export default SalesExecutive_view
+export default EditSalary

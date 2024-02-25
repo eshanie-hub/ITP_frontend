@@ -9,12 +9,16 @@ const Managing_Director = () => {
             </a>
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black" id="menu">
                 <li class="nav-item mb-3">
-                    <a href="../../pages/employee_manage/view" class="nav-link align-middle px-0 text-black ">
+
+                    <a href="../../pages/employee_manage/ManagingDirector_view" class="nav-link align-middle px-0 text-black ">
+
                         <span class="">Employee Management System</span>
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="../../pages/employee_salary/view" class="nav-link align-middle px-0 text-black">
+
+                    <a href="../../pages/employee_salary/ManagingDirector_view" class="nav-link align-middle px-0 text-black">
+
                         <span class="">Employee Salary System</span>
                     </a>
                 </li>
@@ -29,7 +33,9 @@ const Managing_Director = () => {
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="../../pages/distributor/view" class="nav-link align-middle px-0 text-black">
+
+                    <a href="../../pages/distributor/ManagingDirector_view" class="nav-link align-middle px-0 text-black">
+
                         <span class="">Distributor Management System</span>
                     </a>
                 </li>

@@ -1,20 +1,18 @@
 import React from 'react'
 import Header from '../../component/Header'
 
-const report = () => {
+const CustomerReport = () => {
   return (
     <>
     <div class="col">
-
-        <Header dashboard={"Delivery Management System"} />
-
+        <Header dashboard={"Customer Care System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <div class="col py-3">
-            Delievery Report
+            Customer Care Report
             <button className='btn btn-primary mt-5' type='submit'>
-            <a href="./Operator_view"  style={{textDecoration: 'none', color:'white'}}>Back</a>
+            <a href="./view"  style={{textDecoration: 'none', color:'white'}}>Back</a>
             </button>
         </div>
         </div>
@@ -23,4 +21,4 @@ const report = () => {
   )
 }
 
-export default report
+export default CustomerReport

@@ -1,13 +1,11 @@
 import React from 'react'
 import Header from '../../component/Header'
 
-const AddDelivery = () => {
+const AddEmployee = () => {
   return (
     <>
     <div class="col">
-
-        <Header dashboard={"Delivery Management System"} />
-
+        <Header dashboard={"Employee Management System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
@@ -15,7 +13,7 @@ const AddDelivery = () => {
             <div class="mt-5 mb-5 ">
                 <h4>
                     <span class="badge text-bg-secondary">
-                    Add Delievery
+                    Add Employee
                     </span>
                 </h4>
             </div>
@@ -28,4 +26,4 @@ const AddDelivery = () => {
   )
 }
 
-export default AddDelivery
+export default AddEmployee

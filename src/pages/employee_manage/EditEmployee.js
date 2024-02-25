@@ -1,12 +1,11 @@
 import React from 'react'
-
 import Header from '../../component/Header'
 
-const EditDelivery = () => {
+const EditEmployee = () => {
   return (
     <>
     <div class="col">
-        <Header dashboard={"Delivery Management System"} />
+        <Header dashboard={"Employee Management System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
@@ -17,8 +16,7 @@ const EditDelivery = () => {
       </div>
     </div>
   </>
-
   )
 }
 
-export default EditDelivery
+export default EditEmployee

@@ -1,8 +1,23 @@
 import React from 'react'
 
+import Header from '../../component/Header'
+
 const EditPay = () => {
   return (
-    <div>EditPay add form details from edititem in inventory</div>
+    <>
+      <div class="col">
+          <Header dashboard={"Customer Payment History System"} />
+      </div>
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <div class="col py-3">
+          edit form
+          
+            </div>
+        </div>
+      </div>
+    </>
+
   )
 }
 

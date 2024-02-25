@@ -46,6 +46,30 @@ import EditDelivery from './pages/delivery/EditDelivery.js'
 import FactoryDelivery from './pages/delivery/FactoryDelivery_view.js'
 import AddDelivery from './pages/delivery/AddDelivery.js'
 
+
+//employee manage
+import OperatorEmployee from './pages/employee_manage/Operator_view.js'
+import EmployeeReport from './pages/employee_manage/Employee_Report.js'
+import ManagingDirectorEmployee from  './pages/employee_manage/ManagingDirector_view.js'
+import AddEmployee from './pages/employee_manage/AddEmployee.js'
+import EditEmployee from './pages/employee_manage/EditEmployee.js'
+
+//Salary
+import CreditManagerSalary from './pages/employee_salary/CreditManager_view.js'
+import AddSalary from './pages/employee_salary/Add.js'
+import EditSalary from './pages/employee_salary/EditSalary.js'
+import SalaryReport from './pages/employee_salary/Salary_report.js'
+import ManagingDirectorSalary from './pages/employee_salary/ManagingDirector_view.js'
+
+//Distributor
+import ManagingDirectorDistributor from './pages/distributor/ManagingDirector_view.js'
+import DistributorReport from './pages/distributor/DistributorReport.js'
+import AssistantDistributor from './pages/distributor/AssistantDistributor.js'
+import AddDistributor from './pages/distributor/AddDistributor.js'
+import EditDistributor from './pages/distributor/EditDistributor.js'
+import CustomerReport from './pages/customer/CustomerReport.js'
+import EditCustomer from './pages/customer/EditCustomer.js'
+
 const App = () => {
 
   const isAuth = Boolean(useSelector((state) => state.token));
@@ -63,7 +87,15 @@ const App = () => {
           <Route path="/" element={isAuth ?  <SideMenuControl/> : <Home /> }>
             <Route path="/pages/employee_manage/view" element={isAuth ? <EmployeeManage /> : <Home /> }></Route>
             <Route path="/pages/delivery/view" element={isAuth ?<Delivery /> :  <Home /> }></Route>
+
+
+            {/* Customer */}
             <Route path="/pages/customer/view" element={isAuth ? <Customer /> : <Home /> }></Route>
+            <Route path="/pages/customer/report" element={isAuth ? <CustomerReport /> : <Home /> }></Route>
+            <Route path="/pages/customer/edit/:id" element={isAuth ? <EditCustomer /> : <Home /> }></Route>
+
+            <Route path="/pages/customer/view" element={isAuth ? <Customer /> : <Home /> }></Route>
+
             
             {/* Inventory Routes */}
             <Route path="/pages/inventory/view" element={isAuth ? <Inventory /> : <Home /> }></Route>
@@ -101,8 +133,33 @@ const App = () => {
             <Route path="/pages/delivery/edit/:id" element={isAuth ? <EditDelivery /> : <Home /> }></Route>
             <Route path="/pages/delivery/add" element={isAuth ? <AddDelivery /> : <Home /> }></Route>
 
+
+            {/* Employee */}
+            <Route path="/pages/employee_manage/Operator_view" element={isAuth ? <OperatorEmployee /> : <Home /> }></Route>
+            <Route path="/pages/employee_manage/report" element={isAuth ? <EmployeeReport /> : <Home /> }></Route>
+            <Route path="/pages/employee_manage/ManagingDirector_view" element={isAuth ? <ManagingDirectorEmployee /> : <Home /> }></Route>
+            <Route path="/pages/employee_manage/add" element={isAuth ? <AddEmployee /> : <Home /> }></Route>
+            <Route path="/pages/employee_manage/edit/:id" element={isAuth ? <EditEmployee /> : <Home /> }></Route>
+
+
+            {/* Salary */}
+            <Route path="/pages/employee_salary/CreditManager_view" element={isAuth ? <CreditManagerSalary /> : <Home /> }></Route>
+            <Route path="/pages/employee_salary/add" element={isAuth ? <AddSalary /> : <Home /> }></Route>
+            <Route path="/pages/employee_salary/edit/:id" element={isAuth ? <EditSalary /> : <Home /> }></Route>
+            <Route path="/pages/employee_salary/report" element={isAuth ? <SalaryReport /> : <Home /> }></Route>
+            <Route path="/pages/employee_salary/ManagingDirector_view" element={isAuth ? <ManagingDirectorSalary /> : <Home /> }></Route>
+            
+            {/* Distributor */}
+            <Route path="/pages/distributor/ManagingDirector_view" element={isAuth ? <ManagingDirectorDistributor /> : <Home /> }></Route>
+            <Route path="/pages/distributor/report" element={isAuth ? <DistributorReport /> : <Home /> }></Route>
+            <Route path="/pages/distributor/Assistant_view" element={isAuth ? <AssistantDistributor /> : <Home /> }></Route>
+            <Route path="/pages/distributor/add" element={isAuth ? <AddDistributor /> : <Home /> }></Route>
+            <Route path="/pages/distributor/edit/:id" element={isAuth ? <EditDistributor /> : <Home /> }></Route>
+
+
             <Route path="/pages/distributor/view" element={isAuth ? <Distributor /> : <Home /> }></Route>
             
+
             <Route path="/pages/employee_salary/view" element={isAuth ? <Salary /> : <Home /> }></Route>
             
             
