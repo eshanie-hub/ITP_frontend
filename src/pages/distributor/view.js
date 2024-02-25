@@ -5,7 +5,9 @@ const view = () => {
   return (
     <>
       <div class="col">
+
           <Header dashboard={"Distributor Management System"} />
+
       </div>
       <div class="container-fluid">
         <div class="row flex-nowrap">

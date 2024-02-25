@@ -5,7 +5,9 @@ const AddPay = () => {
   return (
     <>
     <div class="col">
+
         <Header dashboard={"Customer Payment History System"} />
+
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">

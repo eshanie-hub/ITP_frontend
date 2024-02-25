@@ -9,7 +9,9 @@ const Operator = () => {
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black" id="menu">
             <li class="nav-item mb-3">
+
                 <a href="../../pages/employee_manage/Operator_view" class="nav-link align-middle px-0 text-black ">
+
                     <span class="">Employee Management System</span>
                 </a>
             </li>

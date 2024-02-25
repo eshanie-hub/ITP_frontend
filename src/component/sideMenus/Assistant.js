@@ -14,7 +14,9 @@ const Assistant = () => {
                 </a>
             </li>
             <li class="nav-item mb-3">
+
                 <a href="../../pages/distributor/Assistant_view" class="nav-link align-middle px-0 text-black">
+
                     <span class="">Distributor Management System</span>
                 </a>
             </li>

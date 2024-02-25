@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from '../../component/Header'
 
 const EditPay = () => {
@@ -16,6 +17,7 @@ const EditPay = () => {
         </div>
       </div>
     </>
+
   )
 }
 

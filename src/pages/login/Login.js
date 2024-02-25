@@ -36,6 +36,7 @@ const handleForm = (e) => {
     dispatch(setMenu({menuType: data.emp_id}))
 
     if(state.emp_id ==="op" && state.password ==="op"){
+
       navigate("../../pages/employee_manage/Operator_view");
     }
     else if(state.emp_id ==="fa" && state.password ==="fa"){
@@ -48,10 +49,12 @@ const handleForm = (e) => {
       navigate("../../pages/delivery/SalesExecutive_view");
     }
     else if(state.emp_id ==="md" && state.password ==="md"){
+
       navigate("../../pages/employee_manage/ManagingDirector_view");
     }
     else if(state.emp_id ==="cm" && state.password ==="cm"){
       navigate("../../pages/employee_salary/CreditManager_view");
+
     }
     else {
       console.log("error")

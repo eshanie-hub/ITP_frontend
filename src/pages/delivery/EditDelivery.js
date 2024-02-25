@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from '../../component/Header'
 
 const EditDelivery = () => {
@@ -16,6 +17,7 @@ const EditDelivery = () => {
       </div>
     </div>
   </>
+
   )
 }
 
