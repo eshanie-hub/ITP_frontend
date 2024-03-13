@@ -11,7 +11,11 @@ const Payment_report = () => {
         <div class="row flex-nowrap">
           <div class="col py-3">
             Payment report
+            <button className='btn btn-primary mt-5' type='submit'>
+            <a href="./CreditManager_view"  style={{textDecoration: 'none', color:'white'}}>Back</a>
+            </button>
             </div>
+           
         </div>
       </div>
     </>
