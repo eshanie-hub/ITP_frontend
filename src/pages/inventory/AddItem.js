@@ -12,6 +12,52 @@ const AddItem = () => {
         size: "",
         price: "",
         stockCount: "",
+<<<<<<< HEAD
+        reorderPoint: ""
+      })
+
+      const [errors, setErrors] = useState({});
+      const [submitting, setSubmitting] = useState(false);
+    
+      const validateValues = (inputValues) => {
+        let errors = {};
+        if (inputValues.itemNo.length < 4) {
+          errors.itemNo = "itemNo is too short";
+        }
+        if (inputValues.itemName.length < 1) {
+          errors.itemName = "itemName is too short";
+        }
+        if (inputValues.color.length < 1) {
+          errors.color = "color is too short";
+        }
+        if (inputValues.size.length < 1) {
+          errors.size = "size is too short";
+        }
+        if (inputValues.price.length < 1) {
+          errors.price = "price is too short";
+        }
+        if (inputValues.stockCount.length < 1) {
+          errors.stockCount = "stockCount is too short";
+        }
+        if (inputValues.reorderPoint.length < 1) {
+          errors.reorderPoint = "reorderPoint is too short";
+        }
+        return errors;
+      };
+
+      const handleChange = (e) =>{
+        setState({ ...state, [e.target.name]: e.target.value });
+        setErrors(validateValues(state));
+      }
+      
+      const handleSubmit = (event) =>{
+        event.preventDefault();
+        setErrors(validateValues(state));
+        setSubmitting(true);
+
+        if(Object.keys(errors).length === 0 && submitting){
+          const 
+=======
       })
     
       const handleChange = (e) =>{
@@ -24,13 +70,19 @@ const AddItem = () => {
         e.preventDefault();
     
         const 
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         {
             itemNo, 
             itemName, 
             color,
             size,
             price,
+<<<<<<< HEAD
+            stockCount,
+            reorderPoint
+=======
             stockCount
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         } = state;
     
         const data = {
@@ -40,6 +92,22 @@ const AddItem = () => {
             size: size,
             price: price,
             stockCount: stockCount,
+<<<<<<< HEAD
+            reorderPoint: reorderPoint
+        }
+        console.log(data);
+
+        axios.post("http://localhost:8000/inventory/add", data)
+        .then((res) => {
+          
+          alert("Item added to inventory");
+          navigate(-1);
+        })
+        }
+        
+      }
+
+=======
         }
         console.log(data);
     
@@ -50,6 +118,7 @@ const AddItem = () => {
         })
       }
     
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
   return (
     <>
     <div class="col">
@@ -67,6 +136,10 @@ const AddItem = () => {
             </div>
           
     {/* table */}
+<<<<<<< HEAD
+  <div>
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
   <div class="row mb-5">
     <div class="col">
         <label class="form-label">ItemNo</label>
@@ -78,7 +151,16 @@ const AddItem = () => {
         value={state.itemNo}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+        {errors.itemNo && (
+          <div class="text-danger mt-2">
+            ItemNo should have 4 characters
+          </div>)}
     </div>
+
+=======
+    </div>
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     <div class="col-6">
     <label class="form-label">ItemName</label>
         <input 
@@ -89,6 +171,14 @@ const AddItem = () => {
         value={state.itemName}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+         {errors.itemName && (
+          <div class="text-danger mt-2">
+            ItemName can't be null
+          </div>
+          )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
   </div>
   <div class="row mt-4">
@@ -102,6 +192,14 @@ const AddItem = () => {
         value={state.color}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+         {errors.color && (
+          <div class="text-danger mt-2">
+            Color can't be null
+          </div>
+          )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Size</label>
@@ -113,6 +211,14 @@ const AddItem = () => {
         value={state.size}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+         {errors.size && (
+          <div class="text-danger mt-2">
+            Size can't be null
+          </div>
+          )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Price</label>
@@ -124,6 +230,14 @@ const AddItem = () => {
         value={state.price}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+         {errors.price && (
+          <div class="text-danger mt-2">
+            Price can't be null
+          </div>
+          )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Stock Count</label>
@@ -135,11 +249,41 @@ const AddItem = () => {
         value={state.stockCount}
         onChange={handleChange}
         />
+<<<<<<< HEAD
+         {errors.stockCount && (
+          <div class="text-danger mt-2">
+            StockCount can't be null
+          </div>
+          )}
+    </div>
+    <div class="col">
+    <label class="form-label">Reorder Point</label>
+        <input 
+        type="text"
+        name="reorderPoint" 
+        className='form-control'
+        placeholder="Enter reorderPoint of the post"
+        value={state.reorderPoint}
+        onChange={handleChange}
+        />
+         {errors.reorderPoint && (
+          <div class="text-danger mt-2">
+            reorderPoint can't be null
+          </div>
+          )}
+    </div>
+
+  <button className='btn btn-success mt-5' type='submit' onClick={handleSubmit}>
+         Save
+      </button>
+      </div>
+=======
     </div>
 
   <button className='btn btn-success mt-5' type='submit' onClick={onsubmit}>
          Save
       </button>
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
 </div>
 
           </div>

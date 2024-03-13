@@ -1,5 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
 
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
 import Header from '../../component/Header'
 
 const EditPay = () => {
@@ -17,7 +20,10 @@ const EditPay = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
+=======
 
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
   )
 }
 
