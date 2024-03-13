@@ -3,6 +3,7 @@ import Header from '../../component/Header';
 import axios from 'axios';
 
 const View = () => {
+  const [search, setSearch] = useState("");
   const [state, setState] = useState({
     inventory: []
   })
@@ -19,7 +20,7 @@ const View = () => {
   return (
     <>
       <div class="col">
-          <Header dashboard={"Inventory Management System"} />
+          <Header dashboard={"Inventory Management System"} setSearch={setSearch}/>
       </div>
       <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -35,10 +36,17 @@ const View = () => {
                     <th scope="col">Size</th>
                     <th scope="col">Price</th>
                     <th scope="col">Stock Count</th>
+                    <th scope="col">Reorder Point</th>
                     </tr>
                 </thead>
                 <tbody>
-                {state.inventory.map((inventory, index) => (
+                {state.inventory.filter((inventory) => {
+                  return search.toLowerCase()===''
+                  ? inventory
+                  : inventory.itemName.toLowerCase().includes(search);
+                })
+                
+                .map((inventory, index) => (
                     <tr key={index}>
                     <td>{inventory.itemNo}</td>
                     <td>{inventory.itemName}</td>
@@ -46,6 +54,7 @@ const View = () => {
                     <td>{inventory.size}</td>
                     <td>{inventory.price}</td>
                     <td>{inventory.stockCount}</td>
+                    <td>{inventory.reorderPoint}</td>
                     <td>
                     </td>
                     </tr>

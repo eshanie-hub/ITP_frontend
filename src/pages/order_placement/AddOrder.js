@@ -59,7 +59,9 @@ const AddOrder = () => {
   return (
     <>
     <div class="col">
+
         <Header dashboard={"Order Placement System"} />
+
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">

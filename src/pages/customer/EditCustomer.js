@@ -1,15 +1,11 @@
 import React from 'react'
-<<<<<<< HEAD
-=======
-
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
 import Header from '../../component/Header'
 
-const EditDelivery = () => {
+const EditCustomer = () => {
   return (
     <>
     <div class="col">
-        <Header dashboard={"Delivery Management System"} />
+        <Header dashboard={"Customer Care System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
@@ -20,11 +16,7 @@ const EditDelivery = () => {
       </div>
     </div>
   </>
-<<<<<<< HEAD
-=======
-
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
   )
 }
 
-export default EditDelivery
+export default EditCustomer
