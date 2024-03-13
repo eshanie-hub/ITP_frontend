@@ -5,7 +5,7 @@ const report = () => {
   return (
     <>
     <div class="col">
-        <Header dashboard={"Inventory Management System"} />
+        <Header dashboard={"Order Placement System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
