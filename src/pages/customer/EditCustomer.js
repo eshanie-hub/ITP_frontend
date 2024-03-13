@@ -3,17 +3,16 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../../component/Header';
 
-
-const EditPay = () => {
+const EditCustomer = () => {
   const params = useParams();
     const navigate = useNavigate();
     const [state, setState] = useState({
-      OrderNo: "",
-      PaymentId: "",
-      Date: "",
-      CustomerName: "",
-      Payment: "",
-        
+        name: "",
+        date: "",
+        type: "",
+        mail: "",
+        message: "",
+        status: "",
       })
     
       const handleChange = (e) =>{
@@ -27,26 +26,16 @@ const EditPay = () => {
     
         const 
         {
-            OrderNo, 
-            PaymentId, 
-            Date,
-            CustomerName,
-            Payment,
-            
+            status
         } = state;
     
         const data = {
-          OrderNo: OrderNo,
-          PaymentId: PaymentId,
-          Date: Date,
-          CustomerName: CustomerName,
-          Payment: Payment,
-            
+            status: status,
         }
         
         
     
-        axios.put(`http://localhost:8000/payment/update/${params.id}`, data)
+        axios.put(`http://localhost:8000/customercare/update/${params.id}`, data)
         .then((res) => {
           alert("Data submited successfully");
           navigate(-1);
@@ -54,15 +43,15 @@ const EditPay = () => {
       }
       
       useEffect(() => {
-        axios.get(`http://localhost:8000/payment/get/${params.id}`).then((res) => {
+        axios.get(`http://localhost:8000/customercare/get/${params.id}`).then((res) => {
           if(res.data){
             setState({
-              OrderNo: res.data.OrderNo,
-              PaymentId: res.data.PaymentId,
-              Date: res.data.Date,
-              CustomerName: res.data.CustomerName,
-              Payment: res.data.Payment,
-              
+              name: res.data.name,
+              date: res.data.date,
+              type: res.data.type,
+              mail: res.data.mail,
+              message: res.data.message,
+              status: res.data.status,
             })
             
           }
@@ -70,92 +59,92 @@ const EditPay = () => {
       },[params.id]);
   return (
     <>
-
     <div class="col">
-        <Header dashboard={"Payment history Management System"} />
+        <Header dashboard={"Customer Care System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <div class="col py-3">
-            <div class="mt-5 mb-5 ">
+        <div class="mt-5 mb-5 ">
                 <h4>
                     <span class="badge text-bg-secondary">
-                    Payment Add 
+                    Update Customer Status
                     </span>
                 </h4>
             </div>
-          
-
-  <div class="row mb-5">
+            <div class="row mb-5">
     <div class="col">
-        <label class="form-label">OrderNo</label>
+        <label class="form-label">Cutomer Name</label>
         <input 
         type="text"
-        name="OrderNo" 
+        name="name" 
         className='form-control'
-        placeholder="Enter OrderNo of the post"
-        value={state.OrderNo}
+        value={state.name}
         onChange={handleChange}
-        />
+        disabled/>
     </div>
     <div class="col-6">
-    <label class="form-label">PaymentId</label>
+    <label class="form-label">Date</label>
         <input 
         type="text"
-        name="PaymentId" 
+        name="date" 
         className='form-control'
-        placeholder="Enter Payment id no of the post"
-        value={state.PaymentId}
+        value={state.date}
         onChange={handleChange}
-        />
+        disabled/>
     </div>
   </div>
   <div class="row mt-4">
   <div class="col">
-    <label class="form-label">Date</label>
+    <label class="form-label">Type</label>
         <input 
         type="text"
-        name="Date" 
+        name="type" 
         className='form-control'
-        placeholder="Enter date of the post"
-        value={state.Date}
+        value={state.type}
         onChange={handleChange}
-        />
+        disabled/>
     </div>
     <div class="col">
-    <label class="form-label">CustomerName</label>
+    <label class="form-label">Mail</label>
         <input 
         type="text"
-        name="CustomerName" 
+        name="size" 
         className='form-control'
-        placeholder="Enter Customer name of the post"
-        value={state.CustomerName}
+        value={state.mail}
         onChange={handleChange}
-        />
+        disabled/>
     </div>
     <div class="col">
-    <label class="form-label">Payment</label>
-        <input 
-        type="text"
-        name="Payment" 
-        className='form-control'
-        placeholder="Enter payment of the post"
-        value={state.Payment}
+    <label class="form-label">Message</label>
+        <textarea className="form-control"
+        rows="5" 
+        id="comment" 
+        name="message"
+        value={state.message}
         onChange={handleChange}
-        />
+        disabled
+      ></textarea>
     </div>
-    
+    <div class="col">
+    <label class="form-label">Status</label>
+        <select name="status" className='form-control'value={state.status} onChange={handleChange}>
+          <option value="Pending">Pending</option>
+          <option value="Resolved">Resolved</option>
+          <option value="Cancel">Cancel</option>
+        </select>
+    </div>
+
   <button className='btn btn-success mt-5' type='submit' onClick={onsubmit}>
          Save
       </button>
 </div>
-
+        
           </div>
       </div>
     </div>
   </>
-
   )
 }
 
-export default EditPay
+export default EditCustomer

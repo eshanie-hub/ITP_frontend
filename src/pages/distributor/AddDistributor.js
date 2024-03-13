@@ -1,17 +1,11 @@
 import React from 'react'
 import Header from '../../component/Header'
 
-const AddDelivery = () => {
+const AddDistributor = () => {
   return (
     <>
     <div class="col">
-<<<<<<< HEAD
-        <Header dashboard={"Delivery Management System"} />
-=======
-
-        <Header dashboard={"Delivery Management System"} />
-
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
+        <Header dashboard={"Distributor Management System"} />
     </div>
     <div class="container-fluid">
       <div class="row flex-nowrap">
@@ -19,11 +13,11 @@ const AddDelivery = () => {
             <div class="mt-5 mb-5 ">
                 <h4>
                     <span class="badge text-bg-secondary">
-                    Add Delievery
+                    Distributor Add 
                     </span>
                 </h4>
             </div>
-            {/* table */}
+            
             get details from inventory AddItem
             </div>
         </div>
@@ -32,4 +26,4 @@ const AddDelivery = () => {
   )
 }
 
-export default AddDelivery
+export default AddDistributor

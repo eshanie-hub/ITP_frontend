@@ -36,7 +36,11 @@ const handleForm = (e) => {
     dispatch(setMenu({menuType: data.emp_id}))
 
     if(state.emp_id ==="op" && state.password ==="op"){
-      navigate("../../pages/employee_manage/view");
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
+      navigate("../../pages/employee_manage/Operator_view");
     }
     else if(state.emp_id ==="fa" && state.password ==="fa"){
       navigate("../../pages/inventory/Factory_view");
@@ -48,10 +52,18 @@ const handleForm = (e) => {
       navigate("../../pages/delivery/SalesExecutive_view");
     }
     else if(state.emp_id ==="md" && state.password ==="md"){
-      navigate("../../pages/employee_manage/view");
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
+      navigate("../../pages/employee_manage/ManagingDirector_view");
     }
     else if(state.emp_id ==="cm" && state.password ==="cm"){
-      navigate("../../pages/employee_salary/view");
+      navigate("../../pages/employee_salary/CreditManager_view");
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     }
     else {
       console.log("error")
