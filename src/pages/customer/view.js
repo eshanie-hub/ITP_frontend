@@ -19,18 +19,7 @@ const View = () => {
       }
     });
   }, [state]);
-
-  return (
-    <>
-    <div class="col">
-        <Header dashboard={"Customer Care System"} />
-    </div>
-    <div class="container-fluid">
-    <div class="row flex-nowrap">
-      <div class="col py-3">
-        Customer view
-
-
+  
   const formatMessage = (message) => {
     const words = message.split(" ");
 
@@ -50,13 +39,6 @@ const View = () => {
         alert("Deleted successfully");
       });
   };
-
-        </div>
-    </div>
-</div>
-</>
-  )
-}
 
   return (
     <>
