@@ -1,11 +1,14 @@
+
 import React, { useEffect, useState } from "react";
 import Header from "../../component/Header";
 import axios from "axios";
+
 
 const View = () => {
   const [state, setState] = useState({
     customercare: [],
   });
+
 
   useEffect(() => {
     axios.get("http://localhost:8000/customercare/").then((res) => {
@@ -17,8 +20,20 @@ const View = () => {
     });
   }, [state]);
 
+  return (
+    <>
+    <div class="col">
+        <Header dashboard={"Customer Care System"} />
+    </div>
+    <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col py-3">
+        Customer view
+
+
   const formatMessage = (message) => {
     const words = message.split(" ");
+
 
     if (words.length <= 3) {
       return message;
@@ -35,6 +50,13 @@ const View = () => {
         alert("Deleted successfully");
       });
   };
+
+        </div>
+    </div>
+</div>
+</>
+  )
+}
 
   return (
     <>
@@ -103,4 +125,6 @@ const View = () => {
   );
 };
 
+
 export default View;
+

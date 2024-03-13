@@ -64,6 +64,8 @@ const Contact = () => {
     }
   return (
 
+
+
   <div className='container '>
   <form className='row g-1 '>
   <h1>Contact</h1>
@@ -129,6 +131,15 @@ const Contact = () => {
   </div>
   </form>
   </div>
+
+    <div> 
+      contact
+      <button className='btn btn-success mt-5' type='submit' onClick={onsubmit}>
+         Save
+      </button>
+
+      </div>
+
   )
 }
 
