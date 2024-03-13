@@ -46,6 +46,10 @@ import EditDelivery from './pages/delivery/EditDelivery.js'
 import FactoryDelivery from './pages/delivery/FactoryDelivery_view.js'
 import AddDelivery from './pages/delivery/AddDelivery.js'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
 //employee manage
 import OperatorEmployee from './pages/employee_manage/Operator_view.js'
 import EmployeeReport from './pages/employee_manage/Employee_Report.js'
@@ -68,6 +72,10 @@ import AddDistributor from './pages/distributor/AddDistributor.js'
 import EditDistributor from './pages/distributor/EditDistributor.js'
 import CustomerReport from './pages/customer/CustomerReport.js'
 import EditCustomer from './pages/customer/EditCustomer.js'
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
 const App = () => {
 
   const isAuth = Boolean(useSelector((state) => state.token));
@@ -86,10 +94,20 @@ const App = () => {
             <Route path="/pages/employee_manage/view" element={isAuth ? <EmployeeManage /> : <Home /> }></Route>
             <Route path="/pages/delivery/view" element={isAuth ?<Delivery /> :  <Home /> }></Route>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
             {/* Customer */}
             <Route path="/pages/customer/view" element={isAuth ? <Customer /> : <Home /> }></Route>
             <Route path="/pages/customer/report" element={isAuth ? <CustomerReport /> : <Home /> }></Route>
             <Route path="/pages/customer/edit/:id" element={isAuth ? <EditCustomer /> : <Home /> }></Route>
+<<<<<<< HEAD
+=======
+
+            <Route path="/pages/customer/view" element={isAuth ? <Customer /> : <Home /> }></Route>
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
             
             {/* Inventory Routes */}
             <Route path="/pages/inventory/view" element={isAuth ? <Inventory /> : <Home /> }></Route>
@@ -127,6 +145,10 @@ const App = () => {
             <Route path="/pages/delivery/edit/:id" element={isAuth ? <EditDelivery /> : <Home /> }></Route>
             <Route path="/pages/delivery/add" element={isAuth ? <AddDelivery /> : <Home /> }></Route>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
             {/* Employee */}
             <Route path="/pages/employee_manage/Operator_view" element={isAuth ? <OperatorEmployee /> : <Home /> }></Route>
             <Route path="/pages/employee_manage/report" element={isAuth ? <EmployeeReport /> : <Home /> }></Route>
@@ -149,6 +171,13 @@ const App = () => {
             <Route path="/pages/distributor/add" element={isAuth ? <AddDistributor /> : <Home /> }></Route>
             <Route path="/pages/distributor/edit/:id" element={isAuth ? <EditDistributor /> : <Home /> }></Route>
 
+<<<<<<< HEAD
+=======
+
+            <Route path="/pages/distributor/view" element={isAuth ? <Distributor /> : <Home /> }></Route>
+            
+
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
             <Route path="/pages/employee_salary/view" element={isAuth ? <Salary /> : <Home /> }></Route>
             
             

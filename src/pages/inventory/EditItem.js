@@ -13,6 +13,7 @@ export const EditItem = () => {
         size: "",
         price: "",
         stockCount: "",
+<<<<<<< HEAD
         reorderPoint: ""
       })
       const [errors, setErrors] = useState({});
@@ -55,6 +56,19 @@ export const EditItem = () => {
         setSubmitting(true);
 
         if(Object.keys(errors).length === 0 && submitting){
+=======
+      })
+    
+      const handleChange = (e) =>{
+        const {name, value} = e.target;
+    
+        setState({...state,[name]:value})
+      }
+    
+      const onsubmit = (e) => {
+        e.preventDefault();
+    
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         const 
         {
             itemNo, 
@@ -62,8 +76,12 @@ export const EditItem = () => {
             color,
             size,
             price,
+<<<<<<< HEAD
             stockCount,
             reorderPoint
+=======
+            stockCount
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         } = state;
     
         const data = {
@@ -73,7 +91,10 @@ export const EditItem = () => {
             size: size,
             price: price,
             stockCount: stockCount,
+<<<<<<< HEAD
             reorderPoint: reorderPoint
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         }
         
         
@@ -84,7 +105,10 @@ export const EditItem = () => {
           navigate(-1);
         })
       }
+<<<<<<< HEAD
     }
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
       
       useEffect(() => {
         axios.get(`http://localhost:8000/inventory/get/${params.id}`).then((res) => {
@@ -96,7 +120,10 @@ export const EditItem = () => {
               size: res.data.size,
               price: res.data.price,
               stockCount: res.data.stockCount,
+<<<<<<< HEAD
               reorderPoint: res.data.reorderPoint,
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
             })
             
           }
@@ -131,10 +158,13 @@ export const EditItem = () => {
         value={state.itemNo}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.itemNo && (
           <div class="text-danger mt-2">
             ItemNo should have 4 characters
           </div>)}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col-6">
     <label class="form-label">ItemName</label>
@@ -146,11 +176,14 @@ export const EditItem = () => {
         value={state.itemName}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.itemName && (
           <div class="text-danger mt-2">
             ItemName can't be null
           </div>
           )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
   </div>
   <div class="row mt-4">
@@ -164,11 +197,14 @@ export const EditItem = () => {
         value={state.color}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.color && (
           <div class="text-danger mt-2">
             Color can't be null
           </div>
           )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Size</label>
@@ -180,11 +216,14 @@ export const EditItem = () => {
         value={state.size}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.size && (
           <div class="text-danger mt-2">
             Size can't be null
           </div>
           )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Price</label>
@@ -196,11 +235,14 @@ export const EditItem = () => {
         value={state.price}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.price && (
           <div class="text-danger mt-2">
             Price can't be null
           </div>
           )}
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
     </div>
     <div class="col">
     <label class="form-label">Stock Count</label>
@@ -212,6 +254,7 @@ export const EditItem = () => {
         value={state.stockCount}
         onChange={handleChange}
         />
+<<<<<<< HEAD
         {errors.stockCount && (
           <div class="text-danger mt-2">
             StockCount can't be null
@@ -236,6 +279,11 @@ export const EditItem = () => {
     </div>
 
   <button className='btn btn-success mt-5' type='submit' onClick={handleSubmit}>
+=======
+    </div>
+
+  <button className='btn btn-success mt-5' type='submit' onClick={onsubmit}>
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
          Save
       </button>
 </div>

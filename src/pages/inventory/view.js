@@ -3,7 +3,10 @@ import Header from '../../component/Header';
 import axios from 'axios';
 
 const View = () => {
+<<<<<<< HEAD
   const [search, setSearch] = useState("");
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
   const [state, setState] = useState({
     inventory: []
   })
@@ -20,7 +23,11 @@ const View = () => {
   return (
     <>
       <div class="col">
+<<<<<<< HEAD
           <Header dashboard={"Inventory Management System"} setSearch={setSearch}/>
+=======
+          <Header dashboard={"Inventory Management System"} />
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
       </div>
       <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -36,6 +43,7 @@ const View = () => {
                     <th scope="col">Size</th>
                     <th scope="col">Price</th>
                     <th scope="col">Stock Count</th>
+<<<<<<< HEAD
                     <th scope="col">Reorder Point</th>
                     </tr>
                 </thead>
@@ -47,6 +55,12 @@ const View = () => {
                 })
                 
                 .map((inventory, index) => (
+=======
+                    </tr>
+                </thead>
+                <tbody>
+                {state.inventory.map((inventory, index) => (
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
                     <tr key={index}>
                     <td>{inventory.itemNo}</td>
                     <td>{inventory.itemName}</td>
@@ -54,7 +68,10 @@ const View = () => {
                     <td>{inventory.size}</td>
                     <td>{inventory.price}</td>
                     <td>{inventory.stockCount}</td>
+<<<<<<< HEAD
                     <td>{inventory.reorderPoint}</td>
+=======
+>>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
                     <td>
                     </td>
                     </tr>
