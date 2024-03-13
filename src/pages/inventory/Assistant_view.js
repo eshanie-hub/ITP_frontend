@@ -25,21 +25,14 @@ const Assistant_view = () => {
             
           })
         }
-<<<<<<< HEAD
 
         const [search, setSearch] = useState("");
         // console.log(search);
-=======
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
         
   return (
     <>
       <div class="col">
-<<<<<<< HEAD
           <Header dashboard={"Inventory Management System"} setSearch={setSearch} />
-=======
-          <Header dashboard={"Inventory Management System"} />
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
       </div>
       <div class="container-fluid pt-5">
         <div class="row flex-nowrap">
@@ -55,15 +48,11 @@ const Assistant_view = () => {
                     <th scope="col">Size</th>
                     <th scope="col">Price</th>
                     <th scope="col">Stock Count</th>
-<<<<<<< HEAD
                     <th scope="col">Reorder Point</th>
-=======
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
                     <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
                 {state.inventory.filter((inventory) => {
                   return search.toLowerCase()===''
                   ? inventory
@@ -71,9 +60,6 @@ const Assistant_view = () => {
                 })
                 
                 .map((inventory, index) => (
-=======
-                {state.inventory.map((inventory, index) => (
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
                     <tr key={index}>
                     <td>{inventory.itemNo}</td>
                     <td>{inventory.itemName}</td>
@@ -81,10 +67,7 @@ const Assistant_view = () => {
                     <td>{inventory.size}</td>
                     <td>{inventory.price}</td>
                     <td>{inventory.stockCount}</td>
-<<<<<<< HEAD
                     <td>{inventory.reorderPoint}</td>
-=======
->>>>>>> aae4c39573c4d38e21946b5cad21588e1069ce9f
                     <td>
                     <div class="d-grid gap-2">
                     <button type="button" class="btn btn-success btn-sm">
